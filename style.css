@@ -1,0 +1,104 @@
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 100px 0;
+    background-color: #7AB2D3; /* Soft Blue */
+    color: white;
+}
+
+header h1 {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+header p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #013221; /* Dark Green */
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #660001; /* Dark Red */
+}
+
+section {
+    margin: 50px 0;
+}
+
+#overview h2, #payment h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #013221; /* Dark Green */
+}
+
+#overview p {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+}
+
+.payment-options {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.payment-option {
+    background-color: #1B1810;
+    color: white;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.payment-option:hover {
+    background-color: #660001;
+    transform: translateY(-5px);
+}
+
+footer {
+    background-color: #013221; /* Dark Green */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .payment-options {
+        flex-direction: column;
+        align-items: center;
+    }
+}
