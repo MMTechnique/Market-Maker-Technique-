@@ -1,0 +1,56 @@
+body {
+  background-color: #121212;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px;
+}
+h1 {
+  text-align: center;
+  color: #FFD700;
+  font-size: 36px;
+  font-weight: bold;
+}
+p {
+  color: grey;
+  font-size: 16px;
+}
+.card {
+  background-color: #1c1c1c;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+}
+.card h3 {
+  color: #00FF00;
+}
+.payment-options {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.payment-address {
+  color: #00BFFF;
+  cursor: pointer;
+}
+.chart-container {
+  margin-top: 40px;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+}
+.price, .market-news, .sentiment {
+  margin-top: 20px;
+}
+.revenue-counter {
+  margin-top: 40px;
+  font-size: 20px;
+  text-align: center;
+  color: #FFD700;
+  font-weight: bold;
+}
