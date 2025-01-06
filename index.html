@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Maker Technique (MMT)</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Replace with the original CSS file link -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#mmt">MMT</a></li>
+                <li><a href="#payment-options">MMT & Payment Options</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section: MMT -->
+    <section id="mmt">
+        <h1>Market Maker Technique</h1>
+        <p>Achieve a 70% ROI and revenue growth while avoiding margin calls using the Market Maker Technique.</p>
+        <img src="trading-chart.jpg" alt="Market Chart" style="width:100%; max-height:400px;"> <!-- Replace with your trading-related image -->
+    </section>
+
+    <!-- Section: MMT & Payment Options -->
+    <section id="payment-options">
+        <h2>MMT & Payment Options</h2>
+        <p>Select a cryptocurrency below to make your payment. Once selected, you'll be prompted to confirm the payment and submit your email for verification:</p>
+        <ul>
+            <li>
+                <strong>BTC:</strong> <a href="#" onclick="openPaymentTab('BTC', 'bc1qngsrq8c8h695de5wwe24093hrgwqgr3d8xk6ks')">Bitcoin (BTC)</a>
+            </li>
+            <li>
+                <strong>ETH:</strong> <a href="#" onclick="openPaymentTab('ETH', '0xd212135E744Dfa264Fb8C77bC9aFf0dfb7b7570e')">Ethereum (ETH)</a>
+            </li>
+            <li>
+                <strong>LTC:</strong> <a href="#" onclick="openPaymentTab('LTC', 'ltc1quy52npvs3jh9yatm5slmyleyv5j5l9lwnwnlwl')">Litecoin (LTC)</a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Section: Contact -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you have any questions, please email us at: <a href="mailto:RichForever9@protonmail.com">RichForever9@protonmail.com</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Template design by <a href="https://webthemez.com/">WebThemez</a>. Modified for Market Maker Technique.</p>
+    </footer>
+
+    <!-- Payment Script -->
+    <script>
+        function openPaymentTab(currency, address) {
+            // Create a new window for payment
+            const paymentPage = `
+                <html>
+                <head>
+                    <title>Pay with ${currency}</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; margin: 20px; text-align: center; }
+                        input[type="email"] { padding: 10px; margin: 10px 0; width: 80%; }
+                        button { padding: 10px 20px; background-color: #007bff; color: #fff; border: none; cursor: pointer; }
+                        button:hover { background-color: #0056b3; }
+                        p { font-size: 18px; }
+                    </style>
+                </head>
+                <body>
+                    <h2>Pay with ${currency}</h2>
+                    <p>Please send your payment to the following address:</p>
+                    <p><strong>${address}</strong></p>
+                    <p>After sending the payment, enter your email below for confirmation:</p>
+                    <form onsubmit="sendEmail(event, '${currency}', '${address}')">
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <button type="submit">Send Email Confirmation</button>
+                    </form>
+                    <script>
+                        function sendEmail(event, currency, address) {
+                            event.preventDefault();
+                            const email = document.getElementById('email').value;
+                            if (email) {
+                                alert('Thank you! An email confirmation will be sent shortly.');
+                                // Simulate sending the email (replace with backend code)
+                                console.log(\`Email sent to: \${email}\\nCurrency: \${currency}\\nAddress: \${address}\`);
+                            }
+                        }
+                    </script>
+                </body>
+                </html>
+            `;
+            const newTab = window.open("", "_blank");
+            newTab.document.write(paymentPage);
+            newTab.document.close();
+        }
+    </script>
+</body>
+</html>
